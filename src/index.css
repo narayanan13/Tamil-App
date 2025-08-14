@@ -1,0 +1,63 @@
+body {
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  font-family: 'Latha', 'Arial', sans-serif; /* Latha is a Tamil-friendly font */
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 250px;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #4cafef;
+  color: white;
+  padding: 10px 16px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #2196f3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: white;
+  margin: 6px 0;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+p {
+  color: #777;
+  font-size: 14px;
+}
+
+div {
+  max-width: 400px;
+  margin: auto;
+  background: #ffffff;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
