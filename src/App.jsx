@@ -1,49 +1,48 @@
-import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
-import './index.css'
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+// import TamilForm from './components/tamilForm';
 
 function App() {
   const { t } = useTranslation();
   const [users, setUsers] = useState([]);
-  const [name, setName] = useState("");
-  const [age, setAge] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
 
   const handleAddUser = () => {
-    if (name && age) {
-      setUsers([...users, { name, age }]);
-      setName("");
-      setAge("");
+    if (name && email) {
+      setUsers([...users, { name, email }]);
+      setName('');
+      setEmail('');
     }
   };
 
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial" }}>
-      <h2>{t("addUser")}</h2>
+    // <TamilForm />
+    <div>
+      <h2>{t('app_title')}</h2>
+
+      <h3>{t('add_user')}</h3>
       <input
         type="text"
-        placeholder={t("name")}
+        placeholder={t('name')}
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      <br />
       <input
-        type="number"
-        placeholder={t("age")}
-        value={age}
-        onChange={(e) => setAge(e.target.value)}
+        type="email"
+        placeholder={t('email')}
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
       />
-      <br />
-      <button onClick={handleAddUser}>{t("submit")}</button>
+      <button onClick={handleAddUser}>{t('submit')}</button>
 
-      <h2>{t("viewUsers")}</h2>
+      <h3>{t('user_list')}</h3>
       {users.length === 0 ? (
-        <p>{t("noUsers")}</p>
+        <p>{t('no_users')}</p>
       ) : (
         <ul>
-          {users.map((user, index) => (
-            <li key={index}>
-              {user.name} - {user.age}
-            </li>
+          {users.map((u, i) => (
+            <li key={i}>{u.name} - {u.email}</li>
           ))}
         </ul>
       )}
