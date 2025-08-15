@@ -37,7 +37,7 @@ function App() {
       <button onClick={handleAddUser}>{t('submit')}</button>
 
       <h3>{t('user_list')}</h3>
-      {users.length === 0 ? (
+      {users.length < 1 ? (
         <p>{t('no_users')}</p>
       ) : (
         <ul>
