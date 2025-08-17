@@ -33,7 +33,7 @@ export default function App() {
   return (
     <div style={{ display: 'flex' }}>
       <Sidebar current={route} onNavigate={setRoute} /> {/* Add Sidebar */}
-      {/* <div style={{ marginLeft: 250, padding: 16, flex: 1, fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial', color: '#111827' }}>
+      <div style={{ marginLeft: 250, padding: 16, flex: 1, fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial', color: '#111827' }}>
         <Header current={route} onNavigate={setRoute} />
         {route === 'dashboard' && (
           <div style={{ background: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: 12, padding: 24, maxWidth: 980, margin: '18px auto' }}>
@@ -59,7 +59,7 @@ export default function App() {
         {route === 'edit' && editing && (
           <EmployeeForm initial={editing} onSubmit={updateEmployee} onCancel={() => { setEditing(null); setRoute('list'); }} />
         )}
-      </div> */}
+      </div>
     </div>
   );
 }
